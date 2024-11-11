@@ -48,7 +48,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 Route::get('/register', [RegisterController::class, 'signupform'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
 Route::get('/booking',[BookingController::class,'index'])->name('category.view');
-Route:post('/booking',[BookingController::class,'store'])->name('category.book');
+Route::post('/booking',[BookingController::class,'store'])->name('category.book');
 
 
 // Logout Route
