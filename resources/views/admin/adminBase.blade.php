@@ -58,7 +58,7 @@
                     <ul>
                         <li class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded transition duration-300 hover:border-r-8 border-yellow-500">
                             <img width="24" height="24" src="https://img.icons8.com/material-rounded/24/eeeeee/dashboard-layout.png" alt="dashboard-layout" />
-                            <a href="" class="text-[#eee] font-medium text-lg">Dashboard</a>
+                            <a href="{{route('dashboard')}}" class="text-[#eee] font-medium text-lg">Dashboard</a>
                         </li>
         
                         <details class="mt-2">
