@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\BookingController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\Auth\LoginController;
@@ -44,6 +45,7 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 // Register Routes
 Route::get('/register', [RegisterController::class, 'signupform'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
+Route::get('/category',[BookingController::class,'index'])->name('category.view');
 
 // Logout Route
 
