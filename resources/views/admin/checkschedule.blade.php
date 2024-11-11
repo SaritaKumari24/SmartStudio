@@ -4,12 +4,13 @@
 
 <div class="bg-gray-800 w-full flex-col items-center flex p-8 rounded-lg shadow-lg overflow-x-auto">
     <h2 class="text-2xl font-semibold mb-6">Manage Booking</h2>
-    <table class=" w-6/12 bg-gray-700 rounded-lg">
+    <table class=" w-full bg-gray-700 rounded-lg">
         <thead>
             <tr class="bg-gray-600">
                 <th class="px-4 py-3 text-left font-medium">Booking Id</th>
                 <th class="px-4 py-3 text-left font-medium"> Name</th>
                 <th class="px-4 py-3 text-left font-medium"> Mobile</th>
+                <th class="px-4 py-3 text-left font-medium"> Date</th>
                 <th class="px-4 py-3 text-left font-medium">Booking Category</th>
                 <th class="px-4 py-3 font-medium">Actions</th>
             </tr>
@@ -20,6 +21,7 @@
                 <td class="px-4 py-3">{{ $item->id }}</td>
                 <td class="px-4 py-3">{{ $item->name }}</td>
                 <td class="px-4 py-3">{{ $item->mobile }}</td>
+                <td class="px-4 py-3">{{ $item->date }}</td>
                 <td class="px-4 py-3">{{ $item->category }}</td>
 
                 <td class="px-4 py-3 flex ">
