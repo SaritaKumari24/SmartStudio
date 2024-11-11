@@ -54,6 +54,7 @@ Route::get('/booking/{category}',function($category){
 })->name('category.name');
 
 Route::post('/booking/{category}',[BookingController::class,'store'])->name('category.store');
+Route::get('admin/checkschedule',[BookingController::class,'showBooking'])->name('booking.show');
 
 
 // Logout Route

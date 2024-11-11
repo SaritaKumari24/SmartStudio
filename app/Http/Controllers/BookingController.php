@@ -24,5 +24,9 @@ class BookingController extends Controller
             Booking::create($data);
 
     }
+    public function showBooking(){
+        $data['bookings']=Booking::all();
+        return view('admin.checkschedule',$data);
+    }
     
 }

@@ -53,7 +53,7 @@
             <div class="w-full h-10 mt-6 text-base flex items-center pl-10 text-gray-500 font-semibold">
                 <p>Main Menu</p>
             </div>
-            <div class="w-full h-[50vh]">
+            <div class="w-full h-screen ">
                 <div class="w-full h-full pl-10 mt-2">
                     <ul>
                         <li class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded transition duration-300 hover:border-r-8 border-yellow-500">
@@ -71,7 +71,7 @@
                                     <a href="" class="text-[#eee] font-medium text-md">Add Event</a>
                                 </li>
                                 <li class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded transition duration-300">
-                                    <a href="" class="text-[#eee] font-medium text-md">Check Schedule</a>
+                                    <a href="{{route('booking.show')}}" class="text-[#eee] font-medium text-md">Check Schedule</a>
                                 </li>
                                 <li class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded transition duration-300">
                                     <a href="" class="text-[#eee] font-medium text-md">Ordered List</a>
