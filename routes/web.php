@@ -61,15 +61,22 @@ Route:post('/booking',[BookingController::class,'store'])->name('category.book')
 
 Route::prefix('admin')->group(function () {
     Route::middleware(['auth'])->group(function () {
+        // dashboard
         Route::get('/dashboard', function () {
             return view('admin.dashboard');
         })->name('dashboard');
-
+        Route::get('/gallery', function () {
+            return view('admin.gallery');
+        })->name('gallery');
+        // category
         Route::controller(CategoryController::class)->prefix('category')->group(function () {
             Route::match(['get', 'post'], '/', 'manageCategory')->name('category');
             
             Route::get('/delete/{id}', 'deleteCategory')->name('category.delete');
         });
+        // gallery
+
+        // contact
         Route::get('/contact-list', [ContactController::class, 'ManageContact'])->name('admin.contact.list');
 
     });

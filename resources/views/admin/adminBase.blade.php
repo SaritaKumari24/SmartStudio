@@ -100,7 +100,20 @@
                             </summary>
                             
                         </details>
-        
+                        <details class="mt-2">
+                            <summary class="flex items-center gap-3 cursor-pointer hover:bg-gray-700 hover:border-r-8 border-yellow-500 p-2 rounded transition duration-300">
+                                <img width="24" height="24" src="https://img.icons8.com/ios/50/FFFFFF/user-male-circle--v1.png" alt="user-male-circle--v1"/> 
+                                <span class="text-[#eee] font-medium text-lg">Gallery</span>
+                            </summary>
+                            <ul class="pl-8">
+                                <li class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded transition duration-300">
+                                    <a href="{{route('gallery')}}" class="text-[#eee] font-medium text-md">Add Gallery</a>
+                                </li>
+                                <li class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded transition duration-300">
+                                    <a href="" class="text-[#eee] font-medium text-md">Manage Gallery</a>
+                                </li>
+                            </ul>
+                        </details>
                         
                         <li class="flex items-center gap-3 hover:bg-gray-700 p-2 rounded transition duration-300 mt-2 hover:border-r-8 border-yellow-500">
                             <img width="24" height="24" src="https://img.icons8.com/ios-filled/50/eeeeee/settings.png" alt="settings" />
