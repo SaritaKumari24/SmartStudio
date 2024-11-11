@@ -8,6 +8,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\contactController;
 
+use function Pest\Laravel\post;
+
 Route::get('/', function () {
     return view('public.home');
 })->name('home');
@@ -45,7 +47,9 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 // Register Routes
 Route::get('/register', [RegisterController::class, 'signupform'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
-Route::get('/category',[BookingController::class,'index'])->name('category.view');
+Route::get('/booking',[BookingController::class,'index'])->name('category.view');
+Route:post('/booking',[BookingController::class,'store'])->name('category.book');
+
 
 // Logout Route
 
