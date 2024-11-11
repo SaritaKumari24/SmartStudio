@@ -18,4 +18,8 @@ class ContactController extends Controller
    
            
        }
+       public function ManageContact(){
+        $data['contacts']=Contact::all();
+        return view('admin.contactList',$data);
+       }
 }

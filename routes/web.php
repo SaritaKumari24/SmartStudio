@@ -32,6 +32,8 @@ Route::get('/contact', function () {
     return view('public.contact');
 })->name('contact');
 Route::post('/contact',[ContactController::class,'store'])->name('contact.store');
+Route::get('/admin/contact-list', [ContactController::class, 'ManageContact'])->name('admin.contact.list');
+
 
 Route::get('/create-users', [UserController::class, 'createUsers']);
 
