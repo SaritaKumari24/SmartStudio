@@ -48,7 +48,12 @@ Route::post('/login', [LoginController::class, 'login'])->name('login.submit');
 Route::get('/register', [RegisterController::class, 'signupform'])->name('register');
 Route::post('/register', [RegisterController::class, 'register'])->name('register.submit');
 Route::get('/booking',[BookingController::class,'index'])->name('category.view');
-Route::post('/booking',[BookingController::class,'store'])->name('category.book');
+Route::get('/booking/{category}',function($category){
+    $data['categorySlug']=$category;
+    return view('public.insertForm',$data);
+})->name('category.name');
+
+Route::post('/booking/{category}',[BookingController::class,'store'])->name('category.store');
 
 
 // Logout Route

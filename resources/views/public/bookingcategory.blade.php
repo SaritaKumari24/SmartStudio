@@ -92,7 +92,7 @@
                 <!-- Card 1 -->
                 
                 @foreach ($bookcat as $cat )
-                <a href="{{route('category.book')}}" class="bg-zinc-900 shadow-lg rounded-lg p-6 transform hover:scale-105 transition-transform duration-300">
+                <a href="{{route('category.name',$cat->cat_name)}}" class="bg-zinc-900 shadow-lg rounded-lg p-6 transform hover:scale-105 transition-transform duration-300">
                     <img src="{{ asset('images/' . $cat->cat_image) }}" alt="Card Image" class="w-full h-24 object-cover rounded-md mb-4">
                     <h3 class="text-xl text-center text-white  font-semibold mb-2 capitalize">{{ $cat->cat_name }}</h3>
                 </a>
