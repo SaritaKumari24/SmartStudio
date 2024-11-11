@@ -52,7 +52,7 @@ Route::post('/register', [RegisterController::class, 'register'])->name('registe
 // admin category
 
 Route::prefix("admin")->group(function(){
-    Route::middleware(['auth', 'admin'])->group(function () {
+    Route::middleware(['auth'])->group(function () {
         Route::get('/dashboard', function () {
             return view('admin.dashboard');  
         })->name('dashboard');
@@ -64,6 +64,7 @@ Route::prefix("admin")->group(function(){
         Route::prefix("category")->group(function(){
             Route::match(["get","post"],'/', "manageCategory")->name("category");
             Route::get('/delete/{id}',"deleteCategory")->name("category.delete");
+
         });
     });
    
